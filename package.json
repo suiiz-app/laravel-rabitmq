@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "scripts": {
+    "release": "standard-version"
+  },
+  "lint-staged": {
+    "*.php": [
+      "composer run-script lint-fix"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^8.3.4",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7",
+    "standard-version": "^9.5.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "composer run-script test"
+    }
+  }
+}
