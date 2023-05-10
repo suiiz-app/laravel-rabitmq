@@ -35,7 +35,7 @@ Add the repository URL to your project's `composer.json` file:
 In the same composer.json file, under the "require" section, add the package and specify the desired version:
   ```json
     "require": {
-        "suiiz-app/laravel-rabitmq": "master"
+        "suiiz-app/laravel-rabitmq": "dev-main"
     }
 ```
 ### 2. Default Configuration
