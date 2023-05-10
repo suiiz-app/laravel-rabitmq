@@ -1,9 +1,10 @@
 # Laravel RabbitMQ
 
-The RabbitMQ Laravel Package provides seamless integration with RabbitMQ messaging queue system in Laravel applications. It allows you to efficiently exchange messages between different parts of your application, facilitating asynchronous and distributed processing.
+The RabbitMQ Laravel Package is a fork of the original laravel-rabbitmq package by kunalvarma05. It provides seamless integration with RabbitMQ messaging queue system in Laravel applications. It allows you to efficiently exchange messages between different parts of your application, facilitating asynchronous and distributed processing.
+
+By leveraging the power of RabbitMQ, you can improve the performance and scalability of your Laravel application. With this package, you can easily configure exchanges, queues, and bindings, and publish/consume messages using familiar Laravel syntax and conventions.
 
 ## Features
-
 - Producers
 - Consumers
 - Publish / Subscribe
@@ -43,6 +44,10 @@ In the same composer.json file, under the "require" section, add the package and
 php artisan vendor:publish --tag=rabbitmq-config
 ```
 
+Open config/app.php file and add the following line to the providers:
+```php
+Suiiz\RabbitMQ\RabbitMQServiceProvider::class,
+```
 ## Quick Start
 
 ### **Initialize**
@@ -352,11 +357,3 @@ class MyRabbitMQController extends Controller {
 ```php
 composer run-script test
 ```
-
-## Credits
-
-- [Kunal Varma](https://github.com/kunalvarma05)
-- [All Contributors](https://github.com/kunalvarma05/laravel-rabbitmq/contributors)
-- [PHP AMQP Lib](https://github.com/php-amqplib/php-amqplib)
-- [PHP AMQ Package](https://github.com/ssi-anik/amqp)
-
