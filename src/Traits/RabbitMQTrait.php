@@ -41,9 +41,9 @@ trait RabbitMQTrait
         $rabbitMQ = app('rabbitmq');
 
         // Configure the exchange
-        $exchangeConfig = [
+         $exchangeConfig = [
             'declare' => true,
-            'type' => $this->exchange_types[$exchange_type],
+            'type' => \PhpAmqpLib\Exchange\AMQPExchangeType::DIRECT,
             'passive' => $passive,
             'durable' => $durable,
             'auto_delete' => $auto_delete,
