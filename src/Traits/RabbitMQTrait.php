@@ -14,7 +14,7 @@ trait RabbitMQTrait
      */
     protected $exchange_types = [
         'direct' => \PhpAmqpLib\Exchange\AMQPExchangeType::DIRECT,
-        'fanout' => \PhpAmqpLib\Exchange\AMQPExchangeType::FANOUTT,
+        'fanout' => \PhpAmqpLib\Exchange\AMQPExchangeType::FANOUT,
         'topic' => \PhpAmqpLib\Exchange\AMQPExchangeType::TOPIC,
         'headers' => \PhpAmqpLib\Exchange\AMQPExchangeType::HEADERS
     ];
